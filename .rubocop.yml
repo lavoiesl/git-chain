@@ -47,3 +47,6 @@ Layout/MultilineMethodCallIndentation:
 
 Style/StringLiteralsInInterpolation:
   EnforcedStyle: double_quotes
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
