@@ -14,7 +14,7 @@ module GitChain
 
             Teardown.new.call
 
-            assert(Models::Chain.from_config("default").empty?)
+            assert_empty(Models::Chain.from_config("default"))
           end
         end
       end
