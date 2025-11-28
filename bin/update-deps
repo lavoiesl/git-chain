@@ -5,12 +5,12 @@ require "open3"
 require "fileutils"
 
 def bail(msg)
-  $stderr.puts("[ERROR] #{msg}")
+  warn("[ERROR] #{msg}")
   exit(1)
 end
 
 def warn(msg)
-  $stderr.puts("[WARNING] #{msg}")
+  warn("[WARNING] #{msg}")
 end
 
 deps = {
