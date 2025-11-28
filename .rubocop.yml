@@ -24,8 +24,20 @@ Minitest/MultipleAssertions:
 Metrics/AbcSize:
   Enabled: false
 
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
 Naming/HeredocDelimiterNaming:
   Enabled: false
 
 Style/Documentation:
   Enabled: false
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented

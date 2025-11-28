@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require File.expand_path("../vendor/bootstrap.rb", __FILE__)
+require File.expand_path('vendor/bootstrap.rb', __dir__)
 
 require "rake"
 require "rake/testtask"
