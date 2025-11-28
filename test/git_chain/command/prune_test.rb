@@ -34,6 +34,7 @@ module GitChain
             assert_equal(%w[master a b], Models::Chain.from_config("default").branch_names)
 
             Prune.new.call(["-d"])
+
             assert_equal(%w[master b], Models::Chain.from_config("default").branch_names)
           end
         end

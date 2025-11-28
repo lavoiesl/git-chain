@@ -90,9 +90,11 @@ module GitChain
             new_a = Git.rev_parse("a")
 
             Git.exec("rebase", "--keep-empty", "--onto", "a", a, "b")
+
             assert_equal(new_a, Git.rev_parse("b~2"))
 
             Rebase.new.call
+
             assert_equal(new_a, Git.rev_parse("b~2"))
           end
         end

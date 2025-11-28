@@ -11,6 +11,7 @@ module GitChain
           with_test_repository("a-b-chain") do
             chain = Models::Chain.from_config("default")
             Setup.new.call(%w[master a b])
+
             assert_equal(chain, Models::Chain.from_config("default"))
           end
         end
@@ -45,12 +46,14 @@ module GitChain
         capture_io do
           with_test_repository("a-b") do
             before = Models::Chain.from_config("default")
+
             assert_equal("default", before.name)
             assert_empty(before.branches)
 
             Setup.new.call(%w[--chain default master a b])
 
             chain = Models::Chain.from_config("default")
+
             assert_equal(%w[master a b], chain.branch_names)
             chain.branches.each_with_index do |b, i|
               if i == 0
