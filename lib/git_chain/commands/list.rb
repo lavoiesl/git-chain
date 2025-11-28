@@ -72,7 +72,7 @@ module GitChain
         end
 
         begin
-          github_url, _, _ = Util::Github.parse_url(remote_url)
+          github_url, = Util::Github.parse_url(remote_url)
         rescue ArgumentError => e
           raise(Abort, "{{error:#{e}}}: {{green:#{remote_url}}}")
         end

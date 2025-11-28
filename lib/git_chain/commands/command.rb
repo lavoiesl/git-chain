@@ -33,7 +33,7 @@ module GitChain
       end
 
       def usage
-        parser, _ = option_parser
+        parser, = option_parser
         parser.to_s
       end
 

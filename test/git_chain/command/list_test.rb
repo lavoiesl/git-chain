@@ -13,7 +13,7 @@ module GitChain
             Branch.new.call(%w[-c new a c])
           end
 
-          out, _ = capture_io do
+          out, = capture_io do
             List.new.call
           end
 

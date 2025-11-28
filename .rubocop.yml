@@ -51,6 +51,9 @@ Style/StringLiteralsInInterpolation:
 Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: comma
 
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+
 Style/GuardClause:
   Enabled: false
 
