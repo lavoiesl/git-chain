@@ -21,6 +21,7 @@ module GitChain
       def exec(*args, dir: nil)
         out, err, stat = capture3(*args, dir: dir)
         raise(Failure.new(args, err)) unless stat.success?
+
         out.chomp
       end
 
@@ -69,6 +70,7 @@ module GitChain
       def remote_url(branch: "", dir: nil)
         name = remote_name(branch: branch, dir: dir)
         return if name.to_s.empty?
+
         exec("remote", "get-url", name)
       end
 
@@ -106,6 +108,7 @@ module GitChain
         end
         out, _, stat = git_config(*args, scope: scope, dir: dir)
         return nil unless stat.success?
+
         out = out.chomp
         out unless out.empty?
       end
@@ -113,6 +116,7 @@ module GitChain
       def get_all_configs(key, scope: nil, dir: nil)
         current_vals, _, stat = git_config("--includes", "--get-all", key, scope: scope, dir: dir)
         return [] unless stat.success?
+
         current_vals.lines.map(&:strip)
       end
 
@@ -140,6 +144,7 @@ module GitChain
       def parse_branch_name(config)
         match = /^branch\.(.+)\.[a-zA-Z]+$/.match(config)
         raise("Expected config #{config} to match regexp") unless match
+
         match[1]
       end
     end

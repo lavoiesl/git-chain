@@ -82,6 +82,7 @@ module GitChain
 
           next unless b.branch_point != branch_point
           raise(Abort, "Branch #{b.name} is currently based on #{b.branch_point}") unless branch_point
+
           Git.set_config("branch.#{b.name}.branchPoint", branch_point, scope: :local)
           b.branch_point = branch_point
         end
