@@ -12,7 +12,7 @@ module GitChain
       end
 
       def puts_error(text)
-        GitChain::Logger.error("{{x}} " + text)
+        GitChain::Logger.error("{{x}} #{text}")
       end
 
       def puts_question(text)
@@ -20,7 +20,7 @@ module GitChain
       end
 
       def puts_info(text)
-        GitChain::Logger.info("{{i}} " + text)
+        GitChain::Logger.info("{{i}} #{text}")
       end
 
       def puts_success(text)
@@ -32,7 +32,7 @@ module GitChain
       end
 
       def puts_debug(text)
-        GitChain::Logger.debug("{{>}} " + text)
+        GitChain::Logger.debug("{{>}} #{text}")
       end
 
       def puts_debug_git(*args)
