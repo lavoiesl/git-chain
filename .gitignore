@@ -8,3 +8,5 @@ build
 
 test/reports
 /demo
+
+/fixtures/*.tar
