@@ -3,7 +3,9 @@
 module GitChain
   module Commands
     autoload :Branch, "git_chain/commands/branch"
+    autoload :Bottom, "git_chain/commands/bottom"
     autoload :Command, "git_chain/commands/command"
+    autoload :Down, "git_chain/commands/down"
     autoload :List, "git_chain/commands/list"
     autoload :Rebase, "git_chain/commands/rebase"
     autoload :Parent, "git_chain/commands/parent"
@@ -11,6 +13,8 @@ module GitChain
     autoload :Push, "git_chain/commands/push"
     autoload :Setup, "git_chain/commands/setup"
     autoload :Teardown, "git_chain/commands/teardown"
+    autoload :Top, "git_chain/commands/top"
+    autoload :Up, "git_chain/commands/up"
 
     ArgError = Class.new(ArgumentError)
 
