@@ -38,7 +38,7 @@ module GitChain
         chain_branch_names = chain.branch_names
 
         branches = branch_names.each_with_index.map do |b, i|
-          previous = i == 0 ? [] : branch_names.first(i)
+          previous = i.zero? ? [] : branch_names.first(i)
           raise(Abort, "#{b} cannot be part of the chain multiple times") if previous.include?(b)
 
           current = chain.branches[i]
@@ -50,7 +50,7 @@ module GitChain
         end
 
         branches.each_with_index do |b, i|
-          next if i == 0 # Skip the base, it can belong to anything
+          next if i.zero? # Skip the base, it can belong to anything
 
           unless b.chain_name == chain.name
             if b.chain_name

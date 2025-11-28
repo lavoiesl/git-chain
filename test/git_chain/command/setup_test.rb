@@ -57,7 +57,7 @@ module GitChain
 
             assert_equal(%w[master a b], chain.branch_names)
             chain.branches.each_with_index do |b, i|
-              if i == 0
+              if i.zero?
                 assert_nil(b.parent_branch)
                 assert_nil(b.branch_point)
               else
