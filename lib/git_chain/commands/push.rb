@@ -54,7 +54,7 @@ module GitChain
         cmd << "--force-with-lease" if options[:force]
         cmd += [remote, *pairs]
 
-        puts_info("Pushing {{info:#{pairs.size}}} branch#{pairs.size > 1 ? "es" : ""} to #{remote}")
+        puts_info("Pushing {{info:#{pairs.size}}} branch#{"es" if pairs.size > 1} to #{remote}")
         puts_debug(cmd.join(" "))
         raise(Abort, "git push failed") unless system(*cmd)
 
