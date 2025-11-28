@@ -49,7 +49,7 @@ module GitChain
 
         pairs = upstreams.map { |b, u| "#{b}:#{u}" }
 
-        cmd = %w(git push)
+        cmd = %w[git push]
         cmd << "--force-with-lease" if options[:force]
         cmd += [remote, *pairs]
 

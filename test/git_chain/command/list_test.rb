@@ -9,7 +9,7 @@ module GitChain
       def test_append
         with_test_repository("a-b-chain") do
           capture_io do
-            Branch.new.call(%w(-c new a c))
+            Branch.new.call(%w[-c new a c])
           end
 
           out, _ = capture_io do

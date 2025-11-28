@@ -11,7 +11,7 @@ module GitChain
 
     class << self
       def capture3(*args, dir: nil)
-        cmd = %w(git)
+        cmd = %w[git]
         cmd += ["-C", dir] if dir
         cmd += args
         Open3.capture3(*cmd)
@@ -30,7 +30,7 @@ module GitChain
       end
 
       def chains(chain_name: nil, dir: nil)
-        args = %w(config --null --get-regexp ^branch\\..+\\.chain$)
+        args = %w[config --null --get-regexp ^branch\\..+\\.chain$]
         args << "^#{Regexp.escape(chain_name)}$" if chain_name
         exec(*args, dir: dir)
           .split("\0")
@@ -97,7 +97,7 @@ module GitChain
       end
 
       def get_config(key, urlmatch: nil, scope: nil, dir: nil)
-        args = %w(--includes)
+        args = %w[--includes]
         args += if urlmatch
           ["--get-urlmatch", key, urlmatch]
         else
@@ -123,7 +123,7 @@ module GitChain
       private
 
       def git_config(*config_args, scope: nil, dir: nil)
-        args = %w(config)
+        args = %w[config]
 
         case scope
         when nil
