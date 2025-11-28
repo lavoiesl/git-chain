@@ -132,6 +132,7 @@ module GitChain
 
         case scope
         when nil
+          # noop
         when :local, :global
           args << "--#{scope}"
         else
