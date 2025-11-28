@@ -101,10 +101,10 @@ module GitChain
       def get_config(key, urlmatch: nil, scope: nil, dir: nil)
         args = %w[--includes]
         args += if urlmatch
-          ["--get-urlmatch", key, urlmatch]
-        else
-          ["--get", key]
-        end
+                  ["--get-urlmatch", key, urlmatch]
+                else
+                  ["--get", key]
+                end
         out, _, stat = git_config(*args, scope: scope, dir: dir)
         return nil unless stat.success?
 
