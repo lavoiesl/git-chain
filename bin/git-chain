@@ -1,4 +1,4 @@
-#!/usr/bin/ruby --disable-gems
+#!/usr/bin/env ruby --disable-gems
 # frozen_string_literal: true
 
 require File.expand_path("../../vendor/bootstrap.rb", File.realpath(__FILE__))
