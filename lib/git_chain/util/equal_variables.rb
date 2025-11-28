@@ -16,7 +16,7 @@ module GitChain
       protected
 
       def state
-        instance_variables.map { |v| [v, instance_variable_get(v)] }.to_h
+        instance_variables.to_h { |v| [v, instance_variable_get(v)] }
       end
     end
   end

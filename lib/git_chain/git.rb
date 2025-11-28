@@ -37,8 +37,7 @@ module GitChain
         exec(*args, dir: dir)
           .split("\0")
           .map { |out| out.split("\n") }
-          .map { |lines| [parse_branch_name(lines.shift), *lines] }
-          .to_h
+          .to_h { |lines| [parse_branch_name(lines.shift), *lines] }
       rescue Failure
         {}
       end
