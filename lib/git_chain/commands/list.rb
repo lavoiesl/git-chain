@@ -77,7 +77,7 @@ module GitChain
           raise(Abort, "{{error:#{e}}}: {{green:#{remote_url}}}")
         end
 
-        branch_names[0..-2].zip(branch_names[1..-1]).each do |(a, b)|
+        branch_names[0..-2].zip(branch_names[1..]).each do |(a, b)|
           puts("  #{github_url}/pull/new/#{a}...#{b}")
         end
       end

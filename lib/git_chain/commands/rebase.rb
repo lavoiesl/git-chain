@@ -20,7 +20,7 @@ module GitChain
 
         puts_debug("Rebasing chain #{chain.formatted}}}")
 
-        branches_to_rebase = chain.branches[1..-1]
+        branches_to_rebase = chain.branches[1..]
 
         raise(Abort, "No branches to rebase for chain '#{chain.name}'.") if branches_to_rebase.empty?
 

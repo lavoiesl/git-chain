@@ -32,7 +32,7 @@ module GitChain
         head = branches.first
         setup = [head.name]
         remove = []
-        branches[1..-1].each do |branch|
+        branches[1..].each do |branch|
           if Git.ancestor?(ancestor: branch.name, rev: head.name)
             remove << branch.name
           else
