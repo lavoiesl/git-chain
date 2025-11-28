@@ -41,3 +41,6 @@ Style/Documentation:
 
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes

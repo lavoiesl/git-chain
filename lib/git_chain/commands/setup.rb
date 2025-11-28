@@ -94,9 +94,7 @@ module GitChain
           Git.set_config("branch.#{b}.branchPoint", nil, scope: :local)
         end
 
-        unless removed.empty?
-          puts_warning("Removed #{removed.map { |b| "{{info:#{b}}}" }.join(", ")} from the chain.")
-        end
+        puts_warning("Removed #{removed.map { |b| "{{info:#{b}}}" }.join(", ")} from the chain.") unless removed.empty?
 
         chain = Models::Chain.from_config(chain.name)
         puts_success("Configured chain #{chain.formatted}")

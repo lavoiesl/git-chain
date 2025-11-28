@@ -21,9 +21,7 @@ deps = {
 deps.each do |dep, copy_path|
   path = File.expand_path(dep, "~/src/github.com/Shopify")
 
-  unless Dir.exist?(path)
-    bail("dependency is not checked out: #{dep} {{bold:{{blue:(try {{green:dev clone}})}}}}")
-  end
+  bail("dependency is not checked out: #{dep} {{bold:{{blue:(try {{green:dev clone}})}}}}") unless Dir.exist?(path)
 
   head_sha = nil
   dirty = false
