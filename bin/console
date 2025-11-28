@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require File.expand_path('../vendor/bootstrap.rb', __dir__)
+require File.expand_path("../vendor/bootstrap.rb", __dir__)
 require "git_chain"
 
 require "irb"
@@ -9,7 +9,7 @@ require "irb/completion"
 require "irb/ext/save-history"
 
 IRB_HISTORY_SIZE = 100
-IRB_HISTORY_FILE = File.expand_path('../.console_history', __dir__)
+IRB_HISTORY_FILE = File.expand_path("../.console_history", __dir__)
 if File.exist?(IRB_HISTORY_FILE)
   lines = IO.readlines(IRB_HISTORY_FILE).collect(&:chomp)
   Readline::HISTORY.push(*lines)
