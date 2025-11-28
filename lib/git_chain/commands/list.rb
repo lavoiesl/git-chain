@@ -36,7 +36,7 @@ module GitChain
       def run(options)
         chain_name = options[:args].first
         chain_names = Git.chains(chain_name: chain_name).values.uniq.sort
-        return(AbortSilent) if chain_names.empty? && chain_name
+        return AbortSilent if chain_names.empty? && chain_name
 
         case options[:format]
         when :short

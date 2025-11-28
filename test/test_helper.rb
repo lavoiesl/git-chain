@@ -35,8 +35,8 @@ end
 
 module Minitest
   class Test
-    def capture_io(&block)
-      cap = CLI::UI::StdoutRouter::Capture.new(with_frame_inset: true, &block)
+    def capture_io(&)
+      cap = CLI::UI::StdoutRouter::Capture.new(with_frame_inset: true, &)
       cap.run
       [cap.stdout, cap.stderr]
     end
