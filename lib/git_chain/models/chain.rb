@@ -37,7 +37,7 @@ module GitChain
           chains = Git.chains(chain_name: name)
           branches = chains.keys.map(&Branch.method(:from_config))
 
-          parents = branches.map(&:parent_branch).compact
+          parents = branches.filter_map(&:parent_branch)
           missing = parents - chains.keys
 
           raise(Abort, "More that one start branch: #{missing}.") if missing.size > 1

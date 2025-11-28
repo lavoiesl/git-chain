@@ -80,7 +80,7 @@ module GitChain
 
       def merge_base(commit, *commits, dir: nil)
         exec("merge-base", commit, *commits, dir: dir)
-      rescue
+      rescue StandardError
         nil
       end
 

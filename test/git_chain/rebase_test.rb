@@ -4,8 +4,6 @@ require "test_helper"
 
 module GitChain
   class RebaseTest < Minitest::Test
-    def test_rebase
-      assert(true)
-    end
+    def test_rebase; end
   end
 end

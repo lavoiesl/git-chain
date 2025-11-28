@@ -83,8 +83,7 @@ module GitChain
         {}
       end
 
-      def post_process_options!(_options)
-      end
+      def post_process_options!(_options); end
     end
   end
 end

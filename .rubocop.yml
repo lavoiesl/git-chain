@@ -59,3 +59,9 @@ Style/GuardClause:
 
 Layout/LineContinuationLeadingSpace:
   Enabled: false
+
+Lint/DuplicateBranch:
+  Enabled: false
+
+Performance/MethodObjectAsBlock:
+  Enabled: false
