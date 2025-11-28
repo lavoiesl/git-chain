@@ -3,7 +3,7 @@
 module GitChain
   module Util
     module EqualVariables
-      alias_method :eql?, :==
+      alias eql? ==
 
       def ==(other)
         other.class == self.class && other.state == state

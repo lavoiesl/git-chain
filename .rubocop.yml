@@ -20,3 +20,12 @@ Style/CommandLiteral:
 
 Minitest/MultipleAssertions:
   Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Naming/HeredocDelimiterNaming:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
